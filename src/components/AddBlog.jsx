@@ -1,3 +1,4 @@
+import { Box, Typography, TextField, InputLabel, Button } from '@mui/material'
 import React , { useState} from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
@@ -22,10 +23,9 @@ export default function AddBlog() {
 }))
   }
 
-  
   const sendRequest = async () => {
-    const res = await axios.post("https://mern-blog-app-2022.herokuapp.com/api/blog/add",{
-    //const res = await axios.post("http://localhost:5000/api/blog/add",{//
+    const res = await axios.post("https://mern-blog-app-2022.herokuapp.com/api/blog/add",{ 
+    //const res = await axios.post("http://localhost:5000/api/blog/add",{
       title:inputs.title,
       description:inputs.description,
       image:inputs.imageURL,
@@ -42,10 +42,12 @@ export default function AddBlog() {
     sendRequest().then((data) => {console.log(data)}).then(() => navigate("/myBlogs"))
   }
 
+
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Container border={3} 
+        <Box border={3} 
              borderColor="linear-gradient(90deg, rgba(6,5,57,1) 0%, rgba(0,129,255,1) 49%, rgba(6,35,41,1) 99%)" 
              borderRadius={10} boxShadow="10px 10px 20px #ccc"
              px={8} py={3} display={'flex'} flexDirection="column" width="50%" margin={"auto"} marginTop={10}
@@ -68,7 +70,7 @@ export default function AddBlog() {
             Post
           </Button>
 
-        </Container>
+        </Box>
       </form>
     </div>
   )

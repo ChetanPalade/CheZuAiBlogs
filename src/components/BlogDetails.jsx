@@ -73,7 +73,7 @@ export default function BlogDetails() {
 
       { inputs &&  <form onSubmit={handleSubmit}>
         <Box border={3} 
-             borderColor="linear-gradient(90deg, rgba(6,5,57,1) 10%, rgba(255,1,1,1) 49%, rgba(6,35,41,1) 99%)" 
+             borderColor="linear-gradient(90deg, rgba(6,5,57,1) 0%, rgba(0,129,255,1) 49%, rgba(6,35,41,1) 99%)" 
              borderRadius={10} boxShadow="10px 10px 20px #ccc"
              padding={3} display={'flex'} flexDirection="column" width="80%" margin={"auto"} marginTop={10}
         >

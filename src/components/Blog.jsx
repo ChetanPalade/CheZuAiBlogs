@@ -1,5 +1,7 @@
 import React from 'react'
-
+import { Box, Card, CardContent, Typography, CardHeader, CardMedia, Avatar , IconButton } from '@mui/material'
+import EditIcon from '@mui/icons-material/EditIcon';
+import DeleteIcon from '@mui/icons-material/DeleteIcon';
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import moment from 'moment';
@@ -52,6 +54,7 @@ export default function Blog({title, description, imageURL, userName, isUser, bl
       
       <CardHeader
         avatar={
+          
               <Avatar sx={{ bgcolor: "blue", }}  > {/*width: 56, height: 56  */}
               {userName.split(/\s/).reduce((response,word)=> response+=word.slice(0,1),'')}  {/* get the 1st letter of each word */}
               </Avatar> 
